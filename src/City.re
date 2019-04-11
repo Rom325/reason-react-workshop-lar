@@ -15,6 +15,7 @@ module Marker = {
   [@react.component]
   [@bs.module "react-leaflet"]
   external make : (~position: array(float)) => React.element = "Marker";
+}
 
 let style = ReactDOMRe.Style.make(~width="300px", ~height="300px", ())
 
