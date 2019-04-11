@@ -3,7 +3,7 @@ open Data
 module Map = {
   [@react.component]
   [@bs.module "react-leaflet"]
-  external make : (~center: array(float)=?, ~style: ReactDOMRe.Style.t=?, ~children : 'a) => React.element = "Map";
+  external make : (~center: array(float)=?, ~zoom:int, ~style: ReactDOMRe.Style.t=?, ~children : 'a) => React.element = "Map";
 };
 
 module TileLayer = {
@@ -25,7 +25,7 @@ let array_of_record = ({lat, lng}) => [|lat, lng|];
 let make = (~city) => {
   let position = array_of_record(city.coordinates);
   <div> 
-    <Map center=position style> 
+    <Map center=position zoom=13 style> 
       <TileLayer url=city.image.url attributionUrl=?city.image.attributionUrl /> 
       <Marker position />
     </Map> 
