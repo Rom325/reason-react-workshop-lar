@@ -1,7 +1,4 @@
 open Data;
-<<<<<<< HEAD
-=======
-
 module Map = {
   [@react.component] [@bs.module "react-leaflet"]
   external make:
@@ -36,9 +33,9 @@ let style = ReactDOMRe.Style.make(~width="300px", ~height="300px", ());
 let array_of_record = ({lat, lng}) => [|lat, lng|];
 
 [@react.component]
-let make = (~city) => {
+let make = (~city, ~onClick) => {
   let position = array_of_record(city.coordinates);
-  <div>
+  <div onClick={_ => onClick(city)}>
     <Map center=position zoom=13 style>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

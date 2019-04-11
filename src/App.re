@@ -5,7 +5,7 @@ type action =
 
 [@react.component]
 let make = () => {
-  let (state, dispattcher) =
+  let (state, dispatcher) =
     React.useReducer(
       (_state, action) =>
         switch (action) {
@@ -19,7 +19,7 @@ let make = () => {
     {List.map(
        (city: Data.city) =>
          <City
-           onClick={city => dispattcher(UpdateCity(city))}
+           onClick={city => dispatcher(UpdateCity(city))}
            key={city.id}
            city
          />,

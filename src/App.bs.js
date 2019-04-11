@@ -2,17 +2,29 @@
 
 import * as List from "bs-platform/lib/es6/list.js";
 import * as $$Array from "bs-platform/lib/es6/array.js";
+import * as Curry from "bs-platform/lib/es6/curry.js";
 import * as React from "react";
 import * as City$ReactTemplate from "./City.bs.js";
 import * as Data$ReactTemplate from "./Data.bs.js";
+import * as MapContainer$ReactTemplate from "./MapContainer.bs.js";
 
 function App(Props) {
+  var match = React.useReducer((function (_state, action) {
+          return /* record */[/* currentCity */action[0]];
+        }), /* record */[/* currentCity */undefined]);
+  var dispatcher = match[1];
+  var match$1 = match[0][/* currentCity */0];
   return React.createElement("div", undefined, React.createElement("h1", undefined, "Cities"), $$Array.of_list(List.map((function (city) {
                         return React.createElement(City$ReactTemplate.make, {
                                     city: city,
+                                    onClick: (function (city) {
+                                        return Curry._1(dispatcher, /* UpdateCity */[city]);
+                                      }),
                                     key: city[/* id */0]
                                   });
-                      }), Data$ReactTemplate.cities)));
+                      }), Data$ReactTemplate.cities)), match$1 !== undefined ? React.createElement(MapContainer$ReactTemplate.make, {
+                    city: match$1
+                  }) : null);
 }
 
 var make = App;
