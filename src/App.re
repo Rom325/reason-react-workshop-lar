@@ -3,10 +3,13 @@ type state = {currentCity: option(Data.city)};
 type action =
   | UpdateCity(Data.city);
 
-let find_opt = (f, l) => {
-  switch(List.find(f, l)) {
-    | item => Some(item)
-    | exception Not_found => None
+module List = {
+  include List
+  let find_opt = (f, l) => {
+    switch(List.find(f, l)) {
+      | item => Some(item)
+      | exception Not_found => None
+    }
   }
 }
 
@@ -46,7 +49,7 @@ let default_content =
 
   switch (path) {
     | ["cities", city] => 
-      switch(find_opt((city_data => city_data.name === city),
+      switch(List.find_opt((city_data => city_data.name === city),
       Data.cities)) {
         | Some(city_data) => <MapContainer city=city_data />
         | None => default_content
