@@ -51,7 +51,15 @@ let default_content =
     | ["cities", city] => 
       switch(List.find_opt((city_data => city_data.name === city),
       Data.cities)) {
-        | Some(city_data) => <MapContainer city=city_data />
+        | Some(city_data) =>
+          <div>
+          <MapContainer city=city_data />
+          <button
+            type_="button"
+            onClick={_ => ReasonReactRouter.push("/")}>
+            {ReasonReact.string("Go back")}
+          </button>
+          </div>
         | None => default_content
       }
     | _ => default_content
