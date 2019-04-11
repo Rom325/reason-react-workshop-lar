@@ -20,43 +20,55 @@ let cities = [
   {
     id: "34a8c685-6088-4eed-bd58-3769b1a408ba",
     name: "Vienna",
-    image: {
+    image:
       // url: "/assets/vienna.jpg",
-      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-      attribution: "CC BY 3.0: Of the individual pictures, Gryffindor (Wikipedia), of the panorama, Roland Geider",
-      attributionUrl: Some("https://commons.wikimedia.org/wiki/File:Stephansdom_Vienna_July_2008_(27)-Stephansdom_Vienna_July_2008_(31).jpg"),
-    },
+      {
+        url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        attribution: "CC BY 3.0: Of the individual pictures, Gryffindor (Wikipedia), of the panorama, Roland Geider",
+        attributionUrl:
+          Some(
+            "https://commons.wikimedia.org/wiki/File:Stephansdom_Vienna_July_2008_(27)-Stephansdom_Vienna_July_2008_(31).jpg",
+          ),
+      },
     coordinates: {
-      lat: 48.2, 
+      lat: 48.2,
       lng: 16.366667,
     },
   },
   {
     id: "675a1180-62cc-4518-b272-a0e1beeaf868",
     name: "New York",
-    image: {
+    image:
       // url: "/assets/new-york.jpg",
-      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-      attribution: "CC BY-SA 4.0: Siddarth Hanumanthu",
-      attributionUrl: Some("https://commons.wikimedia.org/wiki/File:1650_Grand_Concourse.jpg"),
-    },
+      {
+        url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        attribution: "CC BY-SA 4.0: Siddarth Hanumanthu",
+        attributionUrl:
+          Some(
+            "https://commons.wikimedia.org/wiki/File:1650_Grand_Concourse.jpg",
+          ),
+      },
     coordinates: {
-      lat: 40.7127, 
-      lng: -74.0059,
+      lat: 40.7127,
+      lng: (-74.0059),
     },
   },
   {
     id: "873da18c-4eb4-4cd1-8edf-d0bcc5776127",
     name: "Denver",
-    image: {
+    image:
       // url: "/assets/denver.jpg",
-      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-      attribution: "Public Domain",
-      attributionUrl: Some("https://commons.wikimedia.org/wiki/File:Denver_from_Highlands.jpg"),
-    },
+      {
+        url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        attribution: "Public Domain",
+        attributionUrl:
+          Some(
+            "https://commons.wikimedia.org/wiki/File:Denver_from_Highlands.jpg",
+          ),
+      },
     coordinates: {
       lat: 39.76185,
-      lng: -104.881105,
+      lng: (-104.881105),
     },
   },
 ];
