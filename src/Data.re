@@ -21,7 +21,8 @@ let cities = [
     id: "34a8c685-6088-4eed-bd58-3769b1a408ba",
     name: "Vienna",
     image: {
-      url: "/assets/vienna.jpg",
+      // url: "/assets/vienna.jpg",
+      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
       attribution: "CC BY 3.0: Of the individual pictures, Gryffindor (Wikipedia), of the panorama, Roland Geider",
       attributionUrl: Some("https://commons.wikimedia.org/wiki/File:Stephansdom_Vienna_July_2008_(27)-Stephansdom_Vienna_July_2008_(31).jpg"),
     },
@@ -34,7 +35,8 @@ let cities = [
     id: "675a1180-62cc-4518-b272-a0e1beeaf868",
     name: "New York",
     image: {
-      url: "/assets/new-york.jpg",
+      // url: "/assets/new-york.jpg",
+      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
       attribution: "CC BY-SA 4.0: Siddarth Hanumanthu",
       attributionUrl: Some("https://commons.wikimedia.org/wiki/File:1650_Grand_Concourse.jpg"),
     },
@@ -47,7 +49,8 @@ let cities = [
     id: "873da18c-4eb4-4cd1-8edf-d0bcc5776127",
     name: "Denver",
     image: {
-      url: "/assets/denver.jpg",
+      // url: "/assets/denver.jpg",
+      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
       attribution: "Public Domain",
       attributionUrl: Some("https://commons.wikimedia.org/wiki/File:Denver_from_Highlands.jpg"),
     },
