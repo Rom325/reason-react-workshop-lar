@@ -33,15 +33,5 @@ let style = ReactDOMRe.Style.make(~width="300px", ~height="300px", ());
 let array_of_record = ({lat, lng}) => [|lat, lng|];
 
 [@react.component]
-let make = (~city, ~onClick) => {
-  let position = array_of_record(city.coordinates);
-  <div onClick={_ => onClick(city)}>
-    <Map center=position zoom=13 style>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attributionUrl=?{city.image.attributionUrl}
-      />
-      <Marker position> <Popup> <img src={city.image.url} /> </Popup> </Marker>
-    </Map>
-  </div>;
-};
+let make = (~city, ~onClick) =>
+  <div onClick={_ => onClick(city)}> <img src={city.image.url} /> </div>;
