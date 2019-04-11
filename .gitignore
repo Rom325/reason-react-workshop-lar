@@ -6,3 +6,6 @@
 /node_modules/
 /build/Index.js
 /build/index.html
+**.bs.js
+/**/*.bs.js
+src/Data.bs.js
