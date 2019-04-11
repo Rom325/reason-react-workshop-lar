@@ -19,7 +19,7 @@ type city = {
 let cities = [
   {
     id: "34a8c685-6088-4eed-bd58-3769b1a408ba",
-    name: "Vienna",
+    name: "vienna",
     image:
       // url: "/assets/vienna.jpg",
       {
@@ -37,7 +37,7 @@ let cities = [
   },
   {
     id: "675a1180-62cc-4518-b272-a0e1beeaf868",
-    name: "New York",
+    name: "new-york",
     image:
       // url: "/assets/new-york.jpg",
       {
@@ -55,7 +55,7 @@ let cities = [
   },
   {
     id: "873da18c-4eb4-4cd1-8edf-d0bcc5776127",
-    name: "Denver",
+    name: "denver",
     image:
       // url: "/assets/denver.jpg",
       {
